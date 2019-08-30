@@ -3,18 +3,15 @@ folder('ShellJobs') {
     description('Folder for shell jobs')
 }
 job('ShellJobs/beta') {
-
-    steps {
-
-        parameterDefinitions {
-            text {
-                name("testTextBox")
-                defaultValue("This is default value")
-                description("This is description")
-            }
+    parameterDefinitions {
+        text {
+            name("testTextBox")
+            defaultValue("This is default value")
+            description("This is description")
         }
-
-
+    }
+    steps {
+        
         shell(readFileFromWorkspace('lscommand.cmd'))
         environmentVariables {
             propertiesFile('env.sh')
