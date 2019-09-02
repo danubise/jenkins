@@ -6,7 +6,10 @@ folder('JOBS') {
 job('JOBS/getipmaclist') {
 
     steps {
-        shell(readFileFromWorkspace('./shell_files/getipmaclist.sh'))
-        unstableReturn(1)
+        shell{
+            readFileFromWorkspace('./shell_files/getipmaclist.sh')
+            unstableReturn(1)
+        }
+
     }
 }
