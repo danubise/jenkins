@@ -1,5 +1,5 @@
 folder('JOBS') {
-    displayName('Shell Jobs')
+    displayName('MDO JOBS')
     description('Folder for shell jobs')
 }
 
